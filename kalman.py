@@ -81,10 +81,10 @@ for i in range(0,40):
         y=((1/np.sqrt(2*np.pi*next_P[0,0]))*np.exp((-0.5*next_P[0,0])*(xi-next_state[0,0])**2))
         y_axis.append(y)
     for xi in x_axis :
-        y1=((1/np.sqrt(2*np.pi*next_P[0,0]))*np.exp((-0.5*next_P[0,0])*(xi-true_position)**2))
+        y1=((1/np.sqrt(2*np.pi*Q[0,0]))*np.exp((-0.5*Q[0,0])*(xi-true_position)**2))
         y_axis1.append(y1)
     for xi in x_axis :
-        y2=((1/np.sqrt(2*np.pi*next_P[0,0]))*np.exp((-0.5*next_P[0,0])*(xi-measured_position)**2))
+        y2=((1/np.sqrt(2*np.pi*Q[0,0]))*np.exp((-0.5*Q[0,0])*(xi-measured_position)**2))
         y_axis2.append(y2)
     
     
