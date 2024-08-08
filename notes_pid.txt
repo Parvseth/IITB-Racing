@@ -1,0 +1,20 @@
+
+integrator sums up previous errors ; thus having memory of the past ; it's value increases even if the error is decreasing ; thus after reaching the desired altitude, the drone hovers
+
+But there can be a case when the drone reaches that desired speed below the desired altitude; then it will continue to rise up even after reaching desired altitude ; for this derivative is added
+
+This can prevent the overshoot of drone above the desired altitude
+
+The error is decreasing and thus has a negative derivative ; this can prevent overshooting , by controlling the speed of drone
+
+Weighing factor is given to each of the P,I and D parts , adjusting them is called tuning of PID controller
+
+Actuators : devices that generate the force or energy to change the system
+
+But there are problems either actuators: no actuators is perfect: there are problems of backlash, rate constraints and saturation
+
+Suppose we have hold the drone on ground with force; thus not allowing it to leave , then it's speed increases ; consider it's saturation speed be 1000 rpm ; once the speed is 1000 rpm we let it go , then it skyrockets upwards ; the error is still positive,  thus the value of speed increases in algorithm, but the speed remaisn 1000rpm constant ; it will go much beyond the target altitude with this ; suppose it speed reached 2000 rpm in algorithm,l and then decrease in value once the error started being negative ,; then it will take much time till the 2000 rpm will convert to 1000 rpm and then will the rpm of motor in drone will actually start to decrease ; coz until then it has been constant to 1000rpm ; and then eventually after sometime It will achieve the target altitude
+
+Implement anti windup method ; when integrator causes problem 
+anti windup methods: Example ; Clamping.  , back calculation, observer approach
+
