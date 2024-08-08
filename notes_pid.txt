@@ -18,3 +18,7 @@ Suppose we have hold the drone on ground with force; thus not allowing it to lea
 Implement anti windup method ; when integrator causes problem 
 anti windup methods: Example ; Clamping.  , back calculation, observer approach
 
+
+
+** photos to be added ; fro details
+
